@@ -274,3 +274,34 @@ Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDURL).addConverterFactory(G
         });
 
 ```
+
+## Screenshot?
+
+### Login And Register Activity?
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28509637/26856258-2cd8517a-4b3c-11e7-998f-823377474f9b.png" width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856257-2cd7b922-4b3c-11e7-83b6-c13c666bee64.png"  width="400"/>
+</p>
+
+### Home Activity Display List static values?
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28509637/26856254-2cc0d838-4b3c-11e7-94eb-fa2eb329a3bf.png" width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856255-2cc87502-4b3c-11e7-8bc5-b8d7c92e03ba.png"  width="400"/>
+</p>
+
+### Volley Activitys Display & Insert dynamics values using php rest api?
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28509637/26856263-2d0df546-4b3c-11e7-9a45-5f7f9e3190b5.png" width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856264-2d152a32-4b3c-11e7-9c87-366216edc022.png"  width="400"/>
+</p>
+
+### Retrofit Activitys Display & Insert dynamics values using php rest api?
+
+
+
+
+
+
