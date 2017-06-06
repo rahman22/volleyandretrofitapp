@@ -73,7 +73,7 @@ public class HelperVolley {
 
 ```
 
-### Volley StringRequest 
+### Volley StringRequest GET Method Display Data
 
 ```java
 
@@ -130,6 +130,46 @@ public class HelperVolley {
 
 ```
 
+### Volley StringRequest POST Method Insert Data
+
+```java
+
+StringRequest stringRequest = new StringRequest(Request.Method.POST, BASE_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                progressDialog.dismiss();
+                try {
+
+                    JSONObject jsonObject = new JSONObject(response);
+                    Toast.makeText(AddVolleyActivity.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(AddVolleyActivity.this,VolleyActivity.class));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        },
+                new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.dismiss();
+                        Toast.makeText(AddVolleyActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+
+
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> map = new HashMap<>();
+                map.put("company_name", company_name);
+                map.put("hr_number", company_number);
+                map.put("hr_email", company_email);
+                return map;
+            }
+};
+
+```
 
 ## Retrofit Dependencies
 
@@ -165,7 +205,40 @@ public interface ApiRetrofitLib {
 }
 
 ```
-### Retrofit Post Request
+
+### Retrofit GET Request Display Data
+
+```java
+
+ Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDURL)
+                .addConverterFactory(GsonConverterFactory.create()).build();
+
+
+        ApiRetrofitLib lib = retrofit.create(ApiRetrofitLib.class);
+
+        Call<ListHr> call = lib.getHrList();
+
+        call.enqueue(new Callback<ListHr>() {
+
+            @Override
+            public void onResponse(Call<ListHr> call, Response<ListHr> response) {
+
+                mylistadapter = new NoteListAdapter(RetrofitLib2.this, response.body().getGetList());
+                details_list.setAdapter(mylistadapter);
+            }
+
+            @Override
+            public void onFailure(Call<ListHr> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+
+            }
+});
+
+```
+
+
+### Retrofit POST Request Insert Data
 
 ```java
 Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDURL).addConverterFactory(GsonConverterFactory.create()).build();
