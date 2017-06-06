@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thedeveloper.noteappdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".mainpack.MainActivity"
+            android:theme="@style/addTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".mainpack.HomeActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".mainpack.RetrofitLib2"
+            android:parentActivityName=".mainpack.HomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thedeveloper.noteappdemo.mainpack.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".mainpack.VolleyActivity"
+            android:parentActivityName=".mainpack.HomeActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thedeveloper.noteappdemo.mainpack.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".mainpack.HrAddActivity"
+            android:parentActivityName=".mainpack.RetrofitLib2"
+            android:theme="@style/addTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thedeveloper.noteappdemo.mainpack.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".mainpack.AddVolleyActivity"
+            android:parentActivityName=".mainpack.VolleyActivity"
+            android:theme="@style/addTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.thedeveloper.noteappdemo.mainpack.HomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".mainpack.RegisterActivity"
+            android:theme="@style/addTheme"></activity>
+
+
+    </application>
+
+</manifest>

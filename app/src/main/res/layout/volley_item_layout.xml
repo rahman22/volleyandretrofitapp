@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/demoImages"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            />
+
+        <TextView
+            android:id="@+id/companynametext"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_alignTop="@+id/demoImages"
+            android:layout_toEndOf="@+id/demoImages"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hrnumbertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/demoImages"
+            android:layout_below="@+id/companynametext"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/demoImages"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="TextView" />
+
+
+        <TextView
+            android:id="@+id/hremailidtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/demoImages"
+            android:layout_below="@+id/hrnumbertext"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/demoImages"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

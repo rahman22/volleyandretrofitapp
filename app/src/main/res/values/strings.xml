@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Web Services App</string>
+    <string name="title_activity_login">Login Activity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
