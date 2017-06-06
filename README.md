@@ -131,4 +131,73 @@ public class HelperVolley {
 ```
 
 
+## Retrofit Dependencies
 
+```xml
+compile 'com.squareup.retrofit2:retrofit:2.2.0'
+compile 'com.google.code.gson:gson:2.8.0'
+compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+```
+
+### Retrofit Api Use
+
+```java
+
+import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+
+public interface ApiRetrofitLib {
+
+    @GET("retrofitlist")
+    Call<ListHr> getHrList();
+
+
+    @FormUrlEncoded
+    @POST("insertretrofit")
+    Call<Result> createList(
+            @Field("company_name") String name,
+            @Field("hr_number") String number,
+            @Field("hr_email") String email);
+}
+
+```
+### Retrofit Post Request
+
+```java
+Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDURL).addConverterFactory(GsonConverterFactory.create()).build();
+
+        ApiRetrofitLib lib = retrofit.create(ApiRetrofitLib.class);
+
+
+        User user = new User(company_name,company_number,company_mail);
+
+        Call<Result> call = lib.createList(
+                user.getCompany_name(),
+                user.getCompany_number(),
+                user.getCompany_email()
+        );
+
+
+        call.enqueue(new Callback<Result>() {
+            @Override
+            public void onResponse(Call<Result> call, Response<Result> response) {
+
+                dialog.dismiss();
+                Toast.makeText(HrAddActivity.this, response.body().getMessage() , Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HrAddActivity.this,RetrofitLib2.class));
+
+            }
+
+            @Override
+            public void onFailure(Call<Result> call, Throwable t) {
+
+                dialog.hide();
+                Toast.makeText(HrAddActivity.this, t.getMessage() , Toast.LENGTH_SHORT).show();
+            }
+        });
+
+```
