@@ -293,15 +293,21 @@ Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDURL).addConverterFactory(G
 
 ### Volley Activitys Display & Insert dynamics values using php rest api?
 
-<p align="center">
+<p align="left">
   <img src="https://user-images.githubusercontent.com/28509637/26856263-2d0df546-4b3c-11e7-9a45-5f7f9e3190b5.png" width="400"/>
   <img src="https://user-images.githubusercontent.com/28509637/26856264-2d152a32-4b3c-11e7-9c87-366216edc022.png"  width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856256-2cd27d4a-4b3c-11e7-814b-dee9902a080f.png"  width="400"/>
 </p>
 
 ### Retrofit Activitys Display & Insert dynamics values using php rest api?
 
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/28509637/26856261-2d038912-4b3c-11e7-8d0e-b9884b20c53a.png" width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856262-2d08ab5e-4b3c-11e7-9c2c-1f098229c5ea.png"  width="400"/>
+  <img src="https://user-images.githubusercontent.com/28509637/26856260-2cde4a94-4b3c-11e7-89a1-ac098144d2aa.png"  width="400"/>
+</p>
 
-
+##### thanks 
 
 
 
